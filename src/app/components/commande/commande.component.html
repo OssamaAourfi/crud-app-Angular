@@ -1,0 +1,35 @@
+<h1 class="text-center">Commandes</h1>
+<form>
+<div class="form-group ">
+  <label for="one">Enter name</label>
+  <input type="text"
+    class="form-control" name="name" id="one" aria-describedby="helpId" placeholder="Enter name">
+  
+</div>
+<div class="form-group">
+    <label for="two">Enter prix</label>
+    <input type="text"
+      class="form-control" name="name" id="two" aria-describedby="helpId" placeholder="Enter prix">
+    
+  </div>
+  
+</form>
+<table class="table table-success">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let myVariable of myArray">
+            <td>{{myVariable.id}}</td>
+            <td>{{myVariable.name}}</td>
+            <td>{{myVariable.prix}}</td>
+            <td>
+                <button (click)="deleteCommande(myVariable.id)" type="button" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
