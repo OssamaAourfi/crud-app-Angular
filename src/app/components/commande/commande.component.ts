@@ -32,7 +32,7 @@ export class CommandeComponent implements OnInit {
  deleteCommande(id: any){
    this.myVar.delete(id)
    .subscribe(()=>{
-     this.myArray = this.myArray.fiter
+     this.myArray = this.myArray.filter
      ((myVaribale: { id: any; }) =>myVaribale.id !=id)
    })
  } 

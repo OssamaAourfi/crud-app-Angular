@@ -2,16 +2,17 @@
 <form>
 <div class="form-group ">
   <label for="one">Enter name</label>
-  <input type="text"
+  <input type="text" [(ngModel)]="myCommande.name"
     class="form-control" name="name" id="one" aria-describedby="helpId" placeholder="Enter name">
   
 </div>
 <div class="form-group">
     <label for="two">Enter prix</label>
-    <input type="text"
+    <input type="text" [(ngModel)]="myCommande.prix"
       class="form-control" name="name" id="two" aria-describedby="helpId" placeholder="Enter prix">
     
   </div>
+  <button (click)="postCommande()" type="button" class="btn btn-primary block">Add</button>
   
 </form>
 <table class="table table-success">

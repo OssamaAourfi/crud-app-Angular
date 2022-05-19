@@ -4,6 +4,16 @@
       "id": 2,
       "name": "ps5",
       "prix": "1233dh"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 13",
+      "prix": "90900"
+    },
+    {
+      "id": 4,
+      "name": "Iphone x",
+      "prix": "6900"
     }
   ]
 }
