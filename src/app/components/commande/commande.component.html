@@ -9,18 +9,20 @@
 <div class="form-group">
     <label for="two">Enter prix</label>
     <input type="text" [(ngModel)]="myCommande.prix"
-      class="form-control" name="name" id="two" aria-describedby="helpId" placeholder="Enter prix">
+      class="form-control" name="prix" id="two" aria-describedby="helpId" placeholder="Enter prix">
     
   </div>
-  <button (click)="postCommande()" type="button" class="btn btn-primary block">Add</button>
+  <button *ngIf="!myCondition" (click)="postCommande()" type="button" class="btn btn-primary  ">Add</button>
+  <button *ngIf="myCondition" (click)="updateMycommande()" type="button" class="btn btn-warning ">Update</button>
   
 </form>
-<table class="table table-success">
+<table class="table table-success table-block mt-5">
     <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Prix</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -30,6 +32,9 @@
             <td>{{myVariable.prix}}</td>
             <td>
                 <button (click)="deleteCommande(myVariable.id)" type="button" class="btn btn-danger">Delete</button>
+            </td>
+            <td>
+                <button (click)="editCommande(myVariable)" type="button" class="btn btn-warning">Update</button>
             </td>
         </tr>
     </tbody>

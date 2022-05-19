@@ -13,6 +13,8 @@ export class CommandeComponent implements OnInit {
     name : '',
     prix :''
   };
+  myCondition = false ;
+
  
 
   constructor(private myVar:CommandeService) { }
@@ -42,8 +44,37 @@ export class CommandeComponent implements OnInit {
    this.myVar.AddCommande(this.myCommande)
    .subscribe((myVariable)=>{
      this.myArray=[myVariable,...this.myArray];
+     this.clearInput();
    })
 
  }
+ //Vider les inputs
+ clearInput(){
+   this.myCommande ={
+    id  :'',
+    name : '',
+    prix :''
+   }
+ }
+ //edit Commandes
+
+ editCommande(myVariable: any){
+   this.myCommande=myVariable;
+   this.myCondition=true;
+ }
+
+ //update Commandes
+ updateMycommande(){
+   this.myVar.updateCommande(this.myCommande)
+   .subscribe(commande=>{
+     this.clearInput();
+     this.myCondition=false;
+   })
+ }
+
+
 
 }
+
+
+
