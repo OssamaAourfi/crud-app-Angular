@@ -1,29 +1,14 @@
 {
   "commandes": [
     {
+      "id": 1,
+      "name": "PS4",
+      "prix": "340$"
+    },
+    {
       "id": 2,
-      "name": "pss2",
-      "prix": "1233dh"
-    },
-    {
-      "id": 3,
-      "name": "Iphone 13",
-      "prix": "90900"
-    },
-    {
-      "id": 4,
-      "name": "xs",
-      "prix": "6900"
-    },
-    {
-      "id": 5,
-      "name": "ps4",
-      "prix": "2000Dh"
-    },
-    {
-      "id": 6,
-      "name": "xiaomi",
-      "prix": "3000Dh"
+      "name": "PC",
+      "prix": "230$"
     }
   ]
 }
